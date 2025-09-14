@@ -19,36 +19,7 @@ Replication-based Fault Tolerance (default 3 replicas)
 Content-addressable Storage with UUID-based file identification
 
 **System Overview**
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   Storage       │    │   Storage       │    │   Storage       │
-│   Node 1        │    │   Node 2        │    │   Node 3        │
-│                 │    │                 │    │                 │
-│ ┌─────────────┐ │    │ ┌─────────────┐ │    │ ┌─────────────┐ │
-│ │   File A    │ │    │ │   File A    │ │    │ │   File B    │ │
-│ │   File C    │ │    │ │   File B    │ │    │ │   File C    │ │
-│ └─────────────┘ │    │ └─────────────┘ │    │ └─────────────┘ │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
-         │                       │                       │
-         └───────────────────────┼───────────────────────┘
-                                 │
-                    ┌─────────────────────────────┐
-                    │     Distributed File        │
-                    │     System Coordinator      │
-                    │                             │
-                    │  • Hash-based routing       │
-                    │  • Replication management   │
-                    │  • Fault tolerance          │
-                    │  • Load balancing          │
-                    └─────────────────────────────┘
-                                 │
-                    ┌─────────────────────────────┐
-                    │        Web Interface        │
-                    │                             │
-                    │  • File upload/download     │
-                    │  • System monitoring        │
-                    │  • Node management          │
-                    │  • REST API                 │
-                    └─────────────────────────────┘
+
 
 # Distributed File System
 
